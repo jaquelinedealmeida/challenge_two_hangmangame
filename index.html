@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <header class="image-header">
+        <img src="./image/Logo_Amara.png" class="logo">
+    </header>
+    <main>
+        <section id="container">
+
+            <section id="begin">
+                <div>
+                    <p>Vamos jogar?</p>
+                    <button class="begin_game">Começar Jogo</button>
+                    <button class="include_word">Nova Palavra</button>
+                </div>
+            </section>
+            
+            <section id="new_word">
+                <div>
+                    <p>Digite uma palavra</p>
+                    <h5>❗Máximo de 8 letras</h5>
+                    <button class="save">Salvar e Começar</button>
+                    <button class="cancel">Cancelar e retornar</button>
+                </div>
+
+            </section>
+
+            <section id="game">
+                <div id="div-show-hang" class="canvas">
+                    <canvas id="hangman" height="860px" width="1600"></canvas>
+                    <div>
+                        <img>
+                    </div>
+                </div class="sublinhado">
+
+            </section>
+
+            <section id="write_word">
+
+                <div class="keyboard_key">
+                    <button id="tecla-A">A</button>
+                    <button id="tecla-B">B</button>
+                    <button id="tecla-C">C</button>
+                    <button id="tecla-D">D</button>
+                    <button id="tecla-E">E</button>
+                    <button id="tecla-F">F</button>
+                    <button id="tecla-G">G</button>
+                    <button id="tecla-H">H</button>
+                    <button id="tecla-I">I</button>
+                </div>
+
+
+                <div class="keyboard_key">
+                    <button id="tecla-J">J</button>
+                    <button id="tecla-K">K</button>
+                    <button id="tecla-L">L</button>
+                    <button id="tecla-M">M</button>
+                    <button id="tecla-N">N</button>
+                    <button id="tecla-O">O</button>
+                    <button id="tecla-P">P</button>
+                    <button id="tecla-Q">Q</button>
+                    <button id="tecla-R">R</button>
+                </div>
+
+                <div class="keyboard_key">
+                    <button id="tecla-S">S</button>
+                    <button id="tecla-T">T</button>
+                    <button id="tecla-U">U</button>
+                    <button id="tecla-V">V</button>
+                    <button id="tecla-W">W</button>
+                    <button id="tecla-Y">Y</button>
+                    <button id="tecla-X">X</button>
+                    <button id="tecla-Z">Z</button>
+                </div>
+
+
+            </section>
+
+            <section id="try_again">
+
+                <button class="new_game"> Novo Jogo</button>
+                <button class="game_over">Desistir</button>
+
+            </section>
+
+       
+        <footer id="footer">
+            <p>Jaqueline de Almeida </p>
+            <a href="https://github.com/jaquelinedealmeida" target="_blank">
+                <p>GitHub</p>
+            </a>
+            <a href="https://www.linkedin.com/in/jaqueline-de-almeida/" target="_blank">
+                <p>Linkedin</p>
+            </a>
+
+        </footer>
+    </section>
+    </main>
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
