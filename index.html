@@ -18,24 +18,20 @@
     <main>
         <section id="container">
 
-            <section id="begin">
-                <div>
-                    <p>Vamos jogar?</p>
-                    <button class="begin_game">Começar Jogo</button>
-                    <button class="include_word">Nova Palavra</button>
-                </div>
-            </section>
-            
-            <section id="new_word">
-                <div>
-                    <p>Digite uma palavra</p>
-                    <h5>❗Máximo de 8 letras</h5>
-                    <button class="save">Salvar e Começar</button>
-                    <button class="cancel">Cancelar e retornar</button>
-                </div>
+            <div id="div-desapear" class="buttons-home">
 
-            </section>
+                <section id="begin" class="btn-home">
+                    <div>
+                        <p>Vamos jogar?</p>
+                        <div class="begin-start">
+                            <a href="#hangman" input class="begin_game" type="button" id="begin-game">Começar Jogo</a>
+                            <button class="btn_word" id="btn-word" onclick="mostrarTelaAdcionarPalavra()">Adcionar
+                                Palavra</button>
+                        </div>
 
+                    </div>
+                </section>
+            </div>
             <section id="game">
                 <div id="div-show-hang" class="canvas">
                     <canvas id="hangman" height="860px" width="1600"></canvas>
@@ -46,70 +42,87 @@
 
             </section>
 
+            <section id="add_word" class="word_add">
+
+                <div class = "input">
+                    <input class="text-input" type="text" id="input-new-word"
+                        placeholder="Digite uma palavra:❗Máximo de 8 letras">
+                </div>
+
+              
+            </section>
+
             <section id="write_word">
 
                 <div class="keyboard_key">
-                    <button id="tecla-A">A</button>
-                    <button id="tecla-B">B</button>
-                    <button id="tecla-C">C</button>
-                    <button id="tecla-D">D</button>
-                    <button id="tecla-E">E</button>
-                    <button id="tecla-F">F</button>
-                    <button id="tecla-G">G</button>
-                    <button id="tecla-H">H</button>
-                    <button id="tecla-I">I</button>
+                    <button id="tecla-A" onclick="mudarTeclaClicada('A')">A</button>
+                    <button id="tecla-B" onclick="mudarTeclaClicada('B')">B</button>
+                    <button id="tecla-C" onclick="mudarTeclaClicada('C')">C</button>
+                    <button id="tecla-D" onclick="mudarTeclaClicada('D')">D</button>
+                    <button id="tecla-E" onclick="mudarTeclaClicada('E')">E</button>
+                    <button id="tecla-F" onclick="mudarTeclaClicada('F')">F</button>
+                    <button id="tecla-G" onclick="mudarTeclaClicada('G')">G</button>
+                    <button id="tecla-H" onclick="mudarTeclaClicada('H')">H</button>
+                    <button id="tecla-I" onclick="mudarTeclaClicada('I')">I</button>
                 </div>
 
 
                 <div class="keyboard_key">
-                    <button id="tecla-J">J</button>
-                    <button id="tecla-K">K</button>
-                    <button id="tecla-L">L</button>
-                    <button id="tecla-M">M</button>
-                    <button id="tecla-N">N</button>
-                    <button id="tecla-O">O</button>
-                    <button id="tecla-P">P</button>
-                    <button id="tecla-Q">Q</button>
-                    <button id="tecla-R">R</button>
+                    <button id="tecla-J" onclick="mudarTeclaClicada('J')">J</button>
+                    <button id="tecla-K" onclick="mudarTeclaClicada('K')">K</button>
+                    <button id="tecla-L" onclick="mudarTeclaClicada('L')">L</button>
+                    <button id="tecla-M" onclick="mudarTeclaClicada('M')">M</button>
+                    <button id="tecla-N" onclick="mudarTeclaClicada('N')">N</button>
+                    <button id="tecla-O" onclick="mudarTeclaClicada('O')">O</button>
+                    <button id="tecla-P" onclick="mudarTeclaClicada('P')">P</button>
+                    <button id="tecla-Q" onclick="mudarTeclaClicada('Q')">Q</button>
+                    <button id="tecla-R" onclick="mudarTeclaClicada('R')">R</button>
                 </div>
 
                 <div class="keyboard_key">
-                    <button id="tecla-S">S</button>
-                    <button id="tecla-T">T</button>
-                    <button id="tecla-U">U</button>
-                    <button id="tecla-V">V</button>
-                    <button id="tecla-W">W</button>
-                    <button id="tecla-Y">Y</button>
-                    <button id="tecla-X">X</button>
-                    <button id="tecla-Z">Z</button>
+                    <button id="tecla-S" onclick="mudarTeclaClicada('S')">S</button>
+                    <button id="tecla-T" onclick="mudarTeclaClicada('T')">T</button>
+                    <button id="tecla-U" onclick="mudarTeclaClicada('U')">U</button>
+                    <button id="tecla-V" onclick="mudarTeclaClicada('V')">V</button>
+                    <button id="tecla-W" onclick="mudarTeclaClicada('W')">W</button>
+                    <button id="tecla-Y" onclick="mudarTeclaClicada('Y')">Y</button>
+                    <button id="tecla-X" onclick="mudarTeclaClicada('X')">X</button>
+                    <button id="tecla-Z" onclick="mudarTeclaClicada('Z')">Z</button>
                 </div>
-
 
             </section>
+
+            <section class="button-word">
+                <button class="save" id="btn-save">Salvar e Começar</button>
+                <button class="cancel" id="btn-cancel">Cancelar e retornar</button>
+            </section>
+
 
             <section id="try_again">
 
-                <button class="new_game"> Novo Jogo</button>
-                <button class="game_over">Desistir</button>
+                <button class="new_game" id="btn-new-game">Novo Jogo</button>
+                <button class="game_over" id="btn-game-over">Desistir</button>
 
             </section>
 
-       
-        <footer id="footer">
-            <p>Jaqueline de Almeida </p>
-            <a href="https://github.com/jaquelinedealmeida" target="_blank">
-                <p>GitHub</p>
-            </a>
-            <a href="https://www.linkedin.com/in/jaqueline-de-almeida/" target="_blank">
-                <p>Linkedin</p>
-            </a>
+            <footer id="footer">
+                <p>Jaqueline de Almeida </p>
+                <a href="https://github.com/jaquelinedealmeida" target="_blank">
+                    <img src="./image/icons8-github-100.png">
+                </a>
+                <a href="https://www.linkedin.com/in/jaqueline-de-almeida/" target="_blank">
+                    <img src="./image/icons8-linkedin-circundado-100.png">
+                </a>
+                <h5>Projeto desenvolvido para o Programa ONE - Oracle e Alura | 2022</h5>
+                <h6>Todos os Direitos Reservados</h6>
 
-        </footer>
-    </section>
+            </footer>
+        </section>
     </main>
 
 
     <script src="./script.js"></script>
+    <script src="./canvas.js"></script>
 
 </body>
 
