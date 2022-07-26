@@ -1,14 +1,11 @@
 // Seletores
 let tela = document.querySelector("canvas");
-let hagman = (document.getElementById(
-  "game"
-).style.display = "none");
+let hagman = (document.getElementById("game").style.display = "none");
 let btnNovoJogoDesaparecer = (document.getElementById(
   "btn-new-game"
 ).style.display = "none");
-let btnSaveDesaparecer = (document.getElementById(
-  "btn-save"
-).style.display = "none");
+let btnSaveDesaparecer = (document.getElementById("btn-save").style.display =
+  "none");
 let btnCancelDesaparecer = (document.getElementById(
   "btn-cancel"
 ).style.display = "none");
@@ -33,7 +30,6 @@ let palavras = [
   "JAVASCRIPT",
   "TECNOLOGIA",
   "COBOL",
-  
 ];
 //uso de letras maiusculas para usar no Canvas
 
@@ -60,7 +56,6 @@ document.getElementById("btn-save").onclick = () => {
   salvarPalavra();
 };
 
-
 // atualiza a tela quanndo o usuario clica em novo jogo
 btnNovoJogo.addEventListener("click", function () {
   location.reload();
@@ -81,25 +76,22 @@ btnCancelar.addEventListener("click", function () {
   location.reload();
 });
 
-
-
 // uso de Math.floor para inserir numeros inteiro arredondado para baixo e Math.random apra numeros aleatorios
 //escolher palavras aleatórias
 function escolherPalavraSecreta() {
   let palavra = palavras[Math.floor(Math.random() * palavras.length)];
   palavraSecreta = palavra;
-  console.log(palavra)
+  console.log(palavra);
   return palavra;
 }
 
 // verifica qual letra foi clicada
 function verificarLetraClicada(key) {
   if (letras.length < 1 || letras.indexOf(key) < 0) {
-   console.log(key);
+    console.log(key);
     letras.push(key);
     return false;
-  } 
-  else {
+  } else {
     letras.push(key);
     return true;
   }
@@ -125,8 +117,7 @@ function verificarFimdoJogo(letra) {
     //valida se o usuario cometeu o numero maximo
     if (letrasErradas.length > numeroTentativas) {
       exibirDerrota();
-    } 
-    else if (letraEscolhida.length < palavraSecreta.length) {
+    } else if (letraEscolhida.length < palavraSecreta.length) {
       adcionarLetraIncorreta(letra);
       escreverLetraIncorreta(letra, erros);
     }
@@ -137,7 +128,6 @@ function verificarFimdoJogo(letra) {
 function verificarVencedor(letra) {
   letraEscolhida.push(letra.toUpperCase());
   if (letraEscolhida.length == palavraSecreta.length) {
-
     exibirVitoria();
   }
 }
@@ -153,7 +143,7 @@ function verificarLetra(keyCode) {
   }
 }
 
-//Estilo da fonte 
+//Estilo da fonte
 
 function mudarTeclaClicada(letra) {
   mudarStyleLetra("tecla-" + letra);
@@ -167,26 +157,22 @@ function mudarStyleLetra(tecla) {
 // botoes da tela home desaparecem e mostra tela adcionar
 function mostrarTelaAdcionarPalavra() {
   document.getElementById("div-desapear").style.display = "none";
-  
+
   //teclado apareça
   document.getElementById("write_word").style.display = "block";
   //
   document.getElementById("btn-cancel").style.display = "block";
   document.getElementById("btn-save").style.display = "block";
 
- document.getElementById("add_word").style.display =
-  "block";
-  
-
+  document.getElementById("add_word").style.display = "block";
 }
 
 //salva a palavra que o usuário escreveu
 function salvarPalavra() {
-
+  
   //captura o que foi digitado
 
   let novaPalavra = document.getElementById("input-new-word").value;
-  
 
   // inclui a palavra digitada no array de palavras a serem sorteadas
 
@@ -223,7 +209,7 @@ function iniciarJogo() {
   document.getElementById("btn-new-game").style.display = "block";
   document.getElementById("btn-game-over").style.display = "block";
 
-  // faz com que o teclado aparece 
+  // faz com que o teclado aparece
   document.getElementById("write_word").style.display = "block";
 
   // faz com que canvas apareça
@@ -248,12 +234,13 @@ function iniciarJogo() {
         // se houve erros mais que o permitido chama as funcoes
         //que desenham a forca
         else {
-          if (verificarLetraClicada(e.key) && !verificarVencedor(letra)) return;
+          if (!verificarLetraClicada(e.key) && !verificarVencedor(letra)) return;
           desenharForca(erros);
           verificarFimdoJogo(letra);
         }
       }
-    } else {
+    } 
+    else {
       alert("Você atingiu o limite de letras incorretas ");
     }
   };

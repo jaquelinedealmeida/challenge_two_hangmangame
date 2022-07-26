@@ -41,26 +41,31 @@ function escreverLetraCorreta(index) {
     tabuleiro.strokeStyle = "#fafafa";
 
     let largura = 600/palavraSecreta.length
-    tabuleiro.fillText(palavraSecreta[index],505+(largura *index),620)
+    tabuleiro.fillText(palavraSecreta[index],505+(largura*index),620)
     tabuleiro.stroke()
 }
 
-function escreverLetraIncorreta(letra, errorLeft){
+function escreverLetraIncorreta(letra, errorsLeft){
     tabuleiro.font = 'bold 60px Inter';
     tabuleiro.lineWidth = 6;
     tabuleiro.lineJoin = "round";
     tabuleiro.lineJoin = "round";
     tabuleiro.strokeStyle = "#fafafa";
-    tabuleiro.fillText(letra, 535+(10-errorLeft),710,40)
+    tabuleiro.fillText(letra, 535+(40*10-errorsLeft),710,40)
 
 }
 
 
 function desenharForca(pontos) {
-    tabuleiro.linewidth = 8;
+    tabuleiro.linewidth = 100;
     tabuleiro.lineCap ="round"
     tabuleiro.lineJoin = "round"
     tabuleiro.strokeStyle ="#FAFAFA"
+
+    //base inferior 
+    tabuleiro.moveTo(440, 500);
+    tabuleiro.lineTo(800, 500);
+
     if(pontos === 8) {
         //poste lateral
         tabuleiro.moveTo(700,500)
@@ -88,7 +93,7 @@ function desenharForca(pontos) {
     }
     //perna esquerca
     if(pontos === 3) {
-        tabuleiro.moveto(850,389)
+        tabuleiro.moveTo(850,389)
         tabuleiro.lineTo(800,450)
     }
     //perna direita
@@ -112,23 +117,22 @@ function desenharForca(pontos) {
 }
 
 function exibirDerrota() {
-    tabuleiro.font = 'bold 42px Inter';
-    tabuleiro.lineWidth = 6
-    tabuleiro.lineCap = "round"
-    tabuleiro.lineJoin="round"
-    tabuleiro.fillStyle = "red"
-    tabuleiro.fillText("Opa! Fim do Jogo", 930,320)
+    tabuleiro.font = 'bold 80px Inter';
+    tabuleiro.lineWidth = 10;
+    tabuleiro.lineCap = "round";
+    tabuleiro.lineJoin="round";
+    tabuleiro.fillStyle = "orange";
+    tabuleiro.fillText("Opa!Fim do Jogo!",930,320)
 }
 
 function exibirVitoria() {
-    tabuleiro.font ='bold 42px Inter';
-    tabuleiro.lineWidth = 6
-    tabuleiro.lineCap ="round"
-    tabuleiro.lineJoin ="round"
-    tabuleiro.fillStyle="green"
-    tabuleiro.fillStyle=("Oba! Você ganhou! ", 950, 320)
-    tabuleiro.fillText=("Parabéns!!!!", 930,360)
-    setTimeout(recarregar, 1000)
+    tabuleiro.font ='bold 80px Inter';
+    tabuleiro.lineWidth = 6;
+    tabuleiro.lineCap ="round";
+    tabuleiro.lineJoin ="round";
+    tabuleiro.fillStyle="white";
+    tabuleiro.fillText("Oba! Você ganhou! ", 930, 320)
+    setTimeout(recarregar, 500)
 }
 
 function recarregar() {

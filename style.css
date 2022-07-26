@@ -38,11 +38,6 @@ font-family: Inter, sans-serif;
    margin-left: 50px;
 }
 
-#hangman{
-  height:320px;
-  width:486px;
-
-}
 
 #container {
     text-align: center;
@@ -192,6 +187,13 @@ font-family: Inter, sans-serif;
         height: 100px;
        
     }
+
+    #hangman{
+  height:320px;
+  width:486px;
+
+}
+
 
     #begin p {
         font-size: 1.3rem;
