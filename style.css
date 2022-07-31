@@ -11,7 +11,7 @@ body{
 margin-top: 10px;
 background-image: url(./image/background.jpg);
 background-size: cover;
-height: 100%;
+
 background-repeat: no-repeat;
 font-family: Inter, sans-serif;
 }
@@ -44,13 +44,20 @@ font-family: Inter, sans-serif;
   
 }
 
-#begin p {
-    padding: 5rem 0 10rem 0;
+#begin h1 {
+    padding: 5rem  0;
     color:hsl(210, 40%, 98%) ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 1000;
 }
 
+
+#begin h2 {
+    padding: 2rem 0 2rem 0;
+    color: #043942;
+    font-family: Inter; 
+    text-align: center;
+}
 #new_word p {
     padding: 80px;
     text-align: center;
@@ -223,7 +230,7 @@ font-family: Inter, sans-serif;
 
 @media (min-width: 426px) {
 
-    #begin p, #new_word p {
+    #begin h1, #new_word p {
         font-size:1.5rem;
     }
 
@@ -243,7 +250,7 @@ font-family: Inter, sans-serif;
     } 
 
    
-    #begin p {
+    #begin h1 {
         font-size:7rem;
     }
 

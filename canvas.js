@@ -34,11 +34,11 @@ function desenharLinhas() {
 desenharLinhas(escolherPalavraSecreta())
 
 function escreverLetraCorreta(index) {
-    tabuleiro.font = 'bold 100px Inter';
+    tabuleiro.font = 'bold 80px Inter';
     tabuleiro.lineWidth = 6;
     tabuleiro.lineJoin = "round";
     tabuleiro.lineJoin = "round";
-    tabuleiro.strokeStyle = "#fafafa";
+    tabuleiro.fillStyle = "#fafafa";
 
     let largura = 600/palavraSecreta.length
     tabuleiro.fillText(palavraSecreta[index],505+(largura*index),620)
@@ -48,13 +48,12 @@ function escreverLetraCorreta(index) {
 function escreverLetraIncorreta(letra, errorsLeft){
     tabuleiro.font = 'bold 60px Inter';
     tabuleiro.lineWidth = 6;
+    tabuleiro.lineCap = "round";
     tabuleiro.lineJoin = "round";
-    tabuleiro.lineJoin = "round";
-    tabuleiro.strokeStyle = "#fafafa";
-    tabuleiro.fillText(letra, 535+(40*10-errorsLeft),710,40)
+    tabuleiro.fillStyle = "#fafafa";
+    tabuleiro.fillText(letra, 535+(40*(10-errorsLeft)),710,40)
 
 }
-
 
 function desenharForca(pontos) {
     tabuleiro.linewidth = 100;
@@ -127,12 +126,12 @@ function exibirDerrota() {
 
 function exibirVitoria() {
     tabuleiro.font ='bold 80px Inter';
-    tabuleiro.lineWidth = 6;
+    tabuleiro.lineWidth = 10;
     tabuleiro.lineCap ="round";
     tabuleiro.lineJoin ="round";
     tabuleiro.fillStyle="white";
-    tabuleiro.fillText("Oba! Você ganhou! ", 930, 320)
-    setTimeout(recarregar, 500)
+    tabuleiro.fillText("Oba! Você ganhou!", 930, 320)
+    setTimeout(recarregar, 1000)
 }
 
 function recarregar() {

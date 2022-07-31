@@ -81,24 +81,25 @@ btnCancelar.addEventListener("click", function () {
 function escolherPalavraSecreta() {
   let palavra = palavras[Math.floor(Math.random() * palavras.length)];
   palavraSecreta = palavra;
-  console.log(palavra);
+ console.log(palavra);
   return palavra;
 }
 
 // verifica qual letra foi clicada
 function verificarLetraClicada(key) {
   if (letras.length < 1 || letras.indexOf(key) < 0) {
-    console.log(key);
+    //console.log(key);
     letras.push(key);
     return false;
-  } else {
+  } 
+  else {
     letras.push(key);
     return true;
   }
 }
 
 function adcionarLetraCorreta(i) {
-  palavraCerta += palavraSecreta[i].toUpperCase();
+  letraEscolhida += palavraSecreta[i].toUpperCase();
 }
 
 function adcionarLetraIncorreta(letter) {
@@ -117,7 +118,9 @@ function verificarFimdoJogo(letra) {
     //valida se o usuario cometeu o numero maximo
     if (letrasErradas.length > numeroTentativas) {
       exibirDerrota();
-    } else if (letraEscolhida.length < palavraSecreta.length) {
+    } 
+    
+    else if (letraEscolhida.length < palavraSecreta.length) {
       adcionarLetraIncorreta(letra);
       escreverLetraIncorreta(letra, erros);
     }
@@ -128,7 +131,8 @@ function verificarFimdoJogo(letra) {
 function verificarVencedor(letra) {
   letraEscolhida.push(letra.toUpperCase());
   if (letraEscolhida.length == palavraSecreta.length) {
-    exibirVitoria();
+
+    exibirVitoria()
   }
 }
 
@@ -142,6 +146,8 @@ function verificarLetra(keyCode) {
     return false;
   }
 }
+
+//acionar teclado virtual
 
 //Estilo da fonte
 
@@ -215,13 +221,14 @@ function iniciarJogo() {
   // faz com que canvas apareça
   document.getElementById("game").style.display = "block";
 
+
   //captura a letra digitada
   document.onkeydown = (e) => {
     //coloca a letra digitada em maiscula
     let letra = e.key.toUpperCase();
     //verifica se o usuario não perdeu
     if (letrasErradas.length <= numeroTentativas) {
-      if (verificarLetraClicada(e.key) && verificarLetra(e.keyCode)) {
+      if (!verificarLetraClicada(e.key) && verificarLetra(keyCode)) {
         if (palavraSecreta.includes(letra)) {
           adcionarLetraCorreta(palavraSecreta.indexOf(letra));
           for (let i = 0; i < palavraSecreta.length; i++) {
@@ -234,7 +241,8 @@ function iniciarJogo() {
         // se houve erros mais que o permitido chama as funcoes
         //que desenham a forca
         else {
-          if (!verificarLetraClicada(e.key) && !verificarVencedor(letra)) return;
+          if (!verificarLetraClicada(e.key) && !verificarVencedor(letra)) 
+          return
           desenharForca(erros);
           verificarFimdoJogo(letra);
         }
