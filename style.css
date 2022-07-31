@@ -17,10 +17,10 @@ font-family: Inter, sans-serif;
 }
 
 
-.image-header img {
-    width: 150px;   
-    height: 150px;
 
+header {
+    display: flex;
+    justify-content: space-between;
 }
 
 #try_again, .begin-start, .button-word {
@@ -32,11 +32,6 @@ font-family: Inter, sans-serif;
 
 /*-- mobile first*/
 
-.image-header img {
-    width: 100px;   
-    height: 100px;
-   margin-left: 50px;
-}
 
 
 #container {
@@ -45,7 +40,7 @@ font-family: Inter, sans-serif;
 }
 
 #begin h1 {
-    padding: 5rem  0;
+    padding: 2rem  0;
     color:hsl(210, 40%, 98%) ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 1000;
@@ -53,21 +48,9 @@ font-family: Inter, sans-serif;
 
 
 #begin h2 {
-    padding: 2rem 0 2rem 0;
-    color: #043942;
-    font-family: Inter; 
-    text-align: center;
+    padding-bottom: 7rem;
+ 
 }
-#new_word p {
-    padding: 80px;
-    text-align: center;
-}
-
-#new_word h5 {
-    padding: 20px;
-    color:#156597;
-}
-
 
 
 #begin a, #begin button, #new_word,.new_game, .game_over, .button-word button{
@@ -79,18 +62,12 @@ font-family: Inter, sans-serif;
     font-weight: 600;
     padding: 7px;
     cursor: pointer;
-    text-decoration: none;
-    width: 20%;   
-    
-    
+    text-decoration: none;  
+        
 }
 
 #add_word {
     display: flex;
-    
-}
-
-.button-word {
     
 }
 
@@ -101,7 +78,7 @@ font-family: Inter, sans-serif;
     
 }
 
- 
+
 
 /*kEYBOARD */
 .keyboard_key button{
@@ -128,21 +105,21 @@ font-family: Inter, sans-serif;
 
 
 #footer {
-    margin-top: 60px;
-    padding-bottom: 20px;
-    background-color: white;
+    padding-top: 2rem;
+    margin-bottom:0;
+    background-color: #0b5b69;
     width: 100%;
-     margin:0;
+    margin-top: 5rem;
       
 }
 
 #footer p {
-    font-size: .8rem;
-    color: #116ca4;
-    
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(250, 200, 166);
+    width: 100%;
 
 }
-
 
 #footer a {
     text-decoration: none;
@@ -156,34 +133,82 @@ font-family: Inter, sans-serif;
 }
 
 #footer h5 {
-    color:#10405d;
-    font-size: 0.6rem;
+    color:rgb(246, 221, 204);
+    font-size: .7rem;
 }
 
 #footer h6 {
-    color:#092231;
-    font-size: 0.5rem;
+    color: #e7f4fc;  
+    padding-top: .5rem;
+    font-size: .7rem;
 }
 
+
 @media (min-width: 321px) {
+
+    header {
+        display: flex;
+
+        
+    }
     .image-header img {
         width: 80px;
         height: 80px;
+        margin-left: 1rem;
     }
 
-    #begin p {
-        font-size: 1.2em;
+    audio {
+    width: 35%;
+    margin-top: 1rem;
+    margin-right: 2%; 
+    padding: .3rem;
+    }
+
+    #begin h1 {
+        font-size: 2rem;
+    }
+
+    #begin h2 {
+        font-size: 1rem;
+        color:hsl(30, 59%, 93%);
+    }
+
+
+    #begin a, #begin button, #new_word,.new_game, .game_over, .button-word button {
+        font-size: 0.7rem;
+        width: 40%;
+        padding: .5rem;
+        margin-top: 1rem;
+    }
+
+    .text-input  {
+       top: 200px;
+       font-weight: 00;
+       font-size: .8rem;
+       width: auto;
+       height: auto;  
+        
+    }
+
+    
+    #footer p {
+        font-size: .9rem;
 
     }
 
-    #begin a, #begin button {
-        font-size: 1em;
+    #footer h5 {
+        font-size: .5rem;
+        color:hsl(40, 14%, 96%);
+    }
+
+    #footer h6 {
+        font-size: .5rem;
 
     }
 
     .keyboard_key button {
         width: 25px;
-        height: 250x;
+        height: 25px;
 
     }
 }
@@ -195,27 +220,11 @@ font-family: Inter, sans-serif;
        
     }
 
-    #hangman{
-  height:320px;
-  width:486px;
-
-}
-
-
-    #begin p {
-        font-size: 1.3rem;
-
+    audio {
+        padding: .7rem;
     }
 
-    #new_word p {
-        font-size: 1.3rem;
-
-    }
-
-    #new_word h5 {
-        font-size: 1rem;
-    }
-
+   
     #begin a, #begin button, #try_again button {
         font-size: 1rem;
     }
@@ -230,70 +239,51 @@ font-family: Inter, sans-serif;
 
 @media (min-width: 426px) {
 
-    #begin h1, #new_word p {
-        font-size:1.5rem;
-    }
-
+   #begin h1 {
+    font-size: 3rem;
+   }
     #begin a, #begin button, #try_again button {
         margin: 3px;
     }
+
 
 }
 
 @media (min-width: 768px) {
 
+    header {
+        margin-bottom: 3rem;
+    }
+
+    #begin h2 {
+        font-size: 2rem;
+        color:rgb(240, 249, 250)
+    }
+
     .image-header img {
-        width: 150px;
-        height: 150px;
-        margin-left: 100px;
+        width: 180px;
+        height: 180px;
+        margin-left: 80px;
        
     } 
+
+    audio {
+        margin-top:3rem;
+        padding: .9;
+     
+    }
 
    
     #begin h1 {
         font-size:7rem;
     }
 
-
     #begin a, #begin button,  #try_again button, .button-word  button{
-        font-size: 1.3rem;
-        margin: 8px;
-        padding: .8rem;
+        font-size: 1.8rem;
+        margin: 20px;
+        padding: 1.3rem;
+        margin-top: 5rem;
     }
-
-    
-    .input {
-        padding: 3rem;
-    }
-    .text-input {
-        /* Digite seu texto */
- 
-   width: 600px;
-   height: auto;
-   top: 200px;
-   font-weight: 600;
-   font-size: 1.5rem;
-   line-height: 150%;
-   justify-content: center;
-   border: none;
-   color: #fbfdff;
-   background: transparent;
-   border: none;
-
-   text-transform:uppercase;
-   }
-   
-   ::placeholder { 
-   color: #f5f6f7; 
-   text-align: center;
-   text-transform:lowercase;
-
-   }
- 
- .text-input:focus { 
-     border: none;
-     outline: none;
-   }
 
 
     #new_word h5 {
@@ -305,51 +295,68 @@ font-family: Inter, sans-serif;
     }
     
     .write_word {
-        display:flex;
+       display:flex;
       
     }
 
+    .input {
+        padding: 3rem;
+    }
+    .text-input {
+        /* Digite seu texto */
+    
+      width: 600px;
+      height: auto;
+      top: 200px;
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 150%;
+      justify-content: center;
+      border: none;
+      color: #fbfdff;
+      background: transparent;
+      border: none;
+    
+    text-transform:uppercase;
+    
+    }
+    
+    ::placeholder { 
+       color: #f5f6f7; 
+       text-align: center;
+       text-transform:lowercase;
+    
+    }
+    
+    .text-input:focus { 
+       border: none;
+       outline: none;
+    
+    }
+
     .keyboard_key button {
-
-        width: 50px;
-        height: 50px;
-        font-size:1.8rem;
-        margin-top: 0;
+        width: 60px;
+        height: 60px;
+        font-size:2.3rem;
 
     }
 
-    #footer {
-        
-        padding-top: 2rem;
-        margin-bottom:0;
-        background-color: #0b5b69;
-        width: 100%;
-        margin-top: 5rem;
-        
-    }
 
     #footer p {
-        font-size: 1.6rem;
-        font-weight: bold;
-        color: rgb(250, 200, 166);
-        width: 100%;
- 
+       font-size:1.7rem;
     }
 
     #footer img {
-        width: 50px;
-        padding-top: 0.5rem; 
-    }
+        width: 4%;
+     }
 
-    #footer h5 {
+     #footer h5 {
+        font-size: 1rem;
         color:rgb(246, 221, 204);
-        font-size: .8rem;
-    }
+      }
 
-    #footer h6 {
-        color: #e7f4fc;  
-        padding-top: .5rem;
-        font-size: .7rem;
-    }
+     #footer h6 {
+       font-size: .8rem;
+     }
 
 }

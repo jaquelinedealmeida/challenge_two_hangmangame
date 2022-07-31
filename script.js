@@ -21,17 +21,18 @@ let btnSalvar = document.getElementById("btn-save");
 let btnCancelar = document.getElementById("btn-cancel");
 
 //pensar no tamanho das palavras de acordo com o canvas
+//uso de letras maiusculas para usar no Canvas
+
 let palavras = [
-  "LINGUAGENS",
+  "ARDUINO",
   "PYTHON",
   "JAVA",
   "PHP",
   "HTML",
-  "JAVASCRIPT",
-  "TECNOLOGIA",
+  "LUA",
+  "TYPESCRIPT",
   "COBOL",
 ];
-//uso de letras maiusculas para usar no Canvas
 
 let tabuleiro = document.getElementById("hangman").getContext("2d");
 let palavraSecreta = "";
@@ -41,7 +42,7 @@ let erros = 8;
 let letrasErradas = [];
 let numeroTentativas = 8;
 let letraEscolhida = [];
-// uso do array com letras maiusculo
+
 
 //eventos
 
@@ -77,7 +78,7 @@ btnCancelar.addEventListener("click", function () {
 });
 
 // uso de Math.floor para inserir numeros inteiro arredondado para baixo e Math.random apra numeros aleatorios
-//escolher palavras aleatórias
+//faz o sorteio da palavra
 function escolherPalavraSecreta() {
   let palavra = palavras[Math.floor(Math.random() * palavras.length)];
   palavraSecreta = palavra;
@@ -99,7 +100,7 @@ function verificarLetraClicada(key) {
 }
 
 function adcionarLetraCorreta(i) {
-  letraEscolhida += palavraSecreta[i].toUpperCase();
+  palavraCerta += palavraSecreta[i].toUpperCase();
 }
 
 function adcionarLetraIncorreta(letter) {
@@ -109,7 +110,7 @@ function adcionarLetraIncorreta(letter) {
   }
 }
 
-function verificarFimdoJogo(letra) {
+function verificarFimDoJogo(letra) {
   //checa se a letra já foi incluida no array de letras certas e erradas
   if (letraEscolhida.length < palavraSecreta.length) {
     //incluindo as letras  já digitadas no array
@@ -130,22 +131,17 @@ function verificarFimdoJogo(letra) {
 //verifica se o usuario ganhou
 function verificarVencedor(letra) {
   letraEscolhida.push(letra.toUpperCase());
+  
   if (letraEscolhida.length == palavraSecreta.length) {
-
+  
     exibirVitoria()
   }
+
 }
 
 // teclas
 
-// impede que teclas como shift e outras sejam escritas
-function verificarLetra(keyCode) {
-  if (typeof keyCode === "number" && keyCode >= 65 && keyCode <= 90) {
-    return true;
-  } else {
-    return false;
-  }
-}
+
 
 //acionar teclado virtual
 
@@ -211,6 +207,15 @@ function iniciarJogo() {
   //chama a funcao que desenha as linhas
   desenharLinhas();
 
+  // impede que teclas como shift e outras sejam escritas
+function verificarLetra(keyCode) {
+  if (typeof keyCode === "number" && keyCode >= 65 && keyCode <= 90) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
   //faz om que os botoes de "new game e game over" apareça
   document.getElementById("btn-new-game").style.display = "block";
   document.getElementById("btn-game-over").style.display = "block";
@@ -222,19 +227,19 @@ function iniciarJogo() {
   document.getElementById("game").style.display = "block";
 
 
-  //captura a letra digitada
+  //captura a letra digitadau=
   document.onkeydown = (e) => {
     //coloca a letra digitada em maiscula
     let letra = e.key.toUpperCase();
     //verifica se o usuario não perdeu
     if (letrasErradas.length <= numeroTentativas) {
-      if (!verificarLetraClicada(e.key) && verificarLetra(keyCode)) {
+      if (!verificarLetraClicada(e.key) && verificarLetra(e.keyCode)) {
         if (palavraSecreta.includes(letra)) {
           adcionarLetraCorreta(palavraSecreta.indexOf(letra));
           for (let i = 0; i < palavraSecreta.length; i++) {
             if (palavraSecreta[i] === letra) {
-              escreverLetraCorreta(i);
-              verificarVencedor(letra);
+              escreverLetraCorreta(i)
+              verificarVencedor(letra)
             }
           }
         }
@@ -242,9 +247,9 @@ function iniciarJogo() {
         //que desenham a forca
         else {
           if (!verificarLetraClicada(e.key) && !verificarVencedor(letra)) 
-          return
+          return;
           desenharForca(erros);
-          verificarFimdoJogo(letra);
+          verificarFimDoJogo(letra);
         }
       }
     } 

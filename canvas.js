@@ -1,7 +1,7 @@
 //desenhar canvas
 
 function desenharCanvas() {
-    tabuleiro.lineWidth= 15;
+    tabuleiro.lineWidth= 8;
     tabuleiro.lineCap="round";
     tabuleiro.lineJoin="round";
     tabuleiro.fillStyle ="transparent";
@@ -16,11 +16,11 @@ function desenharCanvas() {
 }
 
 function desenharLinhas() {
-    tabuleiro.lineWidth= 8
-    tabuleiro.lineCap="round"
-    tabuleiro.lineJoin="round"
-    tabuleiro.strokeStyle ="0A3871"
-    tabuleiro.beginPath()
+    tabuleiro.lineWidth= 15;
+    tabuleiro.lineCap="round";
+    tabuleiro.lineJoin="round";
+    tabuleiro.strokeStyle ="#FAFAFA";
+    tabuleiro.beginPath();
     let largura=600/palavraSecreta.length
     for (let i = 0; i < palavraSecreta.length;i++) {
         tabuleiro.moveTo(500+(largura * i), 640)
@@ -31,10 +31,8 @@ function desenharLinhas() {
     tabuleiro.closePath()
 }
 
-desenharLinhas(escolherPalavraSecreta())
-
 function escreverLetraCorreta(index) {
-    tabuleiro.font = 'bold 80px Inter';
+    tabuleiro.font = 'bold 100px Inter';
     tabuleiro.lineWidth = 6;
     tabuleiro.lineJoin = "round";
     tabuleiro.lineJoin = "round";
@@ -46,11 +44,11 @@ function escreverLetraCorreta(index) {
 }
 
 function escreverLetraIncorreta(letra, errorsLeft){
-    tabuleiro.font = 'bold 60px Inter';
+    tabuleiro.font = 'bold 80px Inter';
     tabuleiro.lineWidth = 6;
     tabuleiro.lineCap = "round";
     tabuleiro.lineJoin = "round";
-    tabuleiro.fillStyle = "#fafafa";
+    tabuleiro.fillStyle = "#075562";
     tabuleiro.fillText(letra, 535+(40*(10-errorsLeft)),710,40)
 
 }
@@ -130,8 +128,8 @@ function exibirVitoria() {
     tabuleiro.lineCap ="round";
     tabuleiro.lineJoin ="round";
     tabuleiro.fillStyle="white";
-    tabuleiro.fillText("Oba! Você ganhou!", 930, 320)
-    setTimeout(recarregar, 1000)
+    tabuleiro.fillText("Você ganhou!",930,320)
+    setTimeout(recarregar, 200)
 }
 
 function recarregar() {
