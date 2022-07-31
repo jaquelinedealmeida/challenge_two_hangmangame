@@ -60,7 +60,6 @@ header {
     background-color: #599baf;
     color: #fafafa;
     font-weight: 600;
-    padding: 7px;
     cursor: pointer;
     text-decoration: none;  
         
@@ -269,7 +268,7 @@ header {
 
     audio {
         margin-top:3rem;
-        padding: .9;
+        padding: 0rem;
      
     }
 
@@ -283,6 +282,7 @@ header {
         margin: 20px;
         padding: 1.3rem;
         margin-top: 5rem;
+        width: 30%;
     }
 
 
