@@ -39,6 +39,7 @@ header {
   
 }
 
+
 #begin h1 {
     padding: 2rem  0;
     color:hsl(210, 40%, 98%) ;
@@ -57,7 +58,7 @@ header {
     box-shadow: 0px 2px 8px rgb(173, 81, 16); 
     border-radius: 5px;
     border: 2px solid rgb(173, 81, 16); 
-    background-color: #599baf;
+    background-color: #25768f;
     color: #fafafa;
     font-weight: 600;
     cursor: pointer;
@@ -89,7 +90,7 @@ header {
     box-shadow: 0px 2px 8px rgb(198, 87, 8);
     border-radius: 5px;
     border: 2px solid rgb(198, 87, 8); 
-    color:rgb(14, 133, 219);
+    color:#388095;
     font-family: Inter;
     font-weight: 900;
 }
@@ -106,7 +107,7 @@ header {
 #footer {
     padding-top: 2rem;
     margin-bottom:0;
-    background-color: #0b5b69;
+    background-color: #833606;
     width: 100%;
     margin-top: 5rem;
       
@@ -189,7 +190,7 @@ header {
         
     }
 
-    
+
     #footer p {
         font-size: .9rem;
 
@@ -250,25 +251,31 @@ header {
 
 @media (min-width: 768px) {
 
-    header {
-        margin-bottom: 3rem;
-    }
+    #div-show-hang {
+  
+        margin-top:-5rem;  
+        margin-bottom:-3.5rem;
+        display: flex;
+      }
 
+
+    
     #begin h2 {
         font-size: 2rem;
-        color:rgb(240, 249, 250)
+        color:rgb(240, 249, 250);
+    
     }
 
     .image-header img {
         width: 180px;
         height: 180px;
         margin-left: 80px;
-       
+    
     } 
 
     audio {
-        margin-top:3rem;
-        padding: 0rem;
+        margin-top: 3rem;
+        width: 20%;
      
     }
 
@@ -281,7 +288,7 @@ header {
         font-size: 1.8rem;
         margin: 20px;
         padding: 1.3rem;
-        margin-top: 5rem;
+        
         width: 30%;
     }
 
@@ -294,10 +301,6 @@ header {
         display: flex;
     }
     
-    .write_word {
-       display:flex;
-      
-    }
 
     .input {
         padding: 3rem;
@@ -341,22 +344,26 @@ header {
 
     }
 
+    #footer {
+       padding-bottom: .5rem;
+
+    }
 
     #footer p {
        font-size:1.7rem;
     }
 
     #footer img {
-        width: 4%;
+        width: 3%;
      }
 
      #footer h5 {
-        font-size: 1rem;
+        font-size: .6rem;
         color:rgb(246, 221, 204);
       }
 
      #footer h6 {
-       font-size: .8rem;
+       font-size: .6rem;
      }
 
 }

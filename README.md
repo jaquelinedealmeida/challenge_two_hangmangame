@@ -1,17 +1,18 @@
 # challenge_two_hangmangame
-Projeto Meu Portfólio
+Projeto Jogo da Forca
 Desenvolvido para o o Programa ONE - Oracle e Alura - 2022
 
 # Linguagens utilizadas
-HTML, CSS e Javascript. Com validação de formulário utilizando Regex para validar e-mail e telefone.
+HTML, CSS e Javascript. Com uso de Canvas para desenhar a forca, implementação de teclado virtual e áudio.
 
 # Metodologia
-A página foi desenvolvida conforme modelo inicial oferecido pelo Programa One, com desenvolvimento e design criados de acordo com meu repertório conhecimento e estudo.
+A página foi desenvolvida conforme modelo inicial oferecido pelo Programa One, com design criados de acordo com meu repertório conhecimento e estudo.
 
-O design tem referência no meu trabalho profissional que, atualmente, está em trânsito entre a comunicação e tecnologia.
+
+A página está responsiva para mobile e tablet.
 
 # Página Web
-[https://jaquelinedealmeida.github.io/my-portfolio-challenge3/]
+[https://jaquelinedealmeida.github.io/challenge_two_hangmangame/]
 
 # Autora
 Jaqueline de Almeida Linkedin[https://www.linkedin.com/in/jaqueline-de-almeida/]

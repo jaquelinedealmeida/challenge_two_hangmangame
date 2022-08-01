@@ -86,6 +86,8 @@ function escolherPalavraSecreta() {
   return palavra;
 }
 
+// teclas
+
 // verifica qual letra foi clicada
 function verificarLetraClicada(key) {
   if (letras.length < 1 || letras.indexOf(key) < 0) {
@@ -108,6 +110,27 @@ function adcionarLetraIncorreta(letter) {
     erros -= 1;
     //letter é o parametro da funcao
   }
+}
+
+
+//acionar teclado virtual
+
+function verificarLetraEscolhida(letra){
+  document.getElementById("tecla-" + letra).disabled = true;
+  if(numeroTentativas > 0)
+  {
+      mudarStyleLetra("tecla-" + letra);
+      verificarLetraClicada(letra);
+      adcionarLetraCorreta();
+      adcionarLetraIncorreta();
+    
+  }    
+}
+
+
+function mudarStyleLetra(tecla) {
+  document.getElementById(tecla).style.background = "#25768f;";
+  document.getElementById(tecla).style.color = "#ffffff";
 }
 
 function verificarFimDoJogo(letra) {
@@ -139,22 +162,6 @@ function verificarVencedor(letra) {
 
 }
 
-// teclas
-
-
-
-//acionar teclado virtual
-
-//Estilo da fonte
-
-function mudarTeclaClicada(letra) {
-  mudarStyleLetra("tecla-" + letra);
-}
-
-function mudarStyleLetra(tecla) {
-  document.getElementById(tecla).style.background = "#156597";
-  document.getElementById(tecla).style.color = "#ffffff";
-}
 
 // botoes da tela home desaparecem e mostra tela adcionar
 function mostrarTelaAdcionarPalavra() {
@@ -227,7 +234,7 @@ function verificarLetra(keyCode) {
   document.getElementById("game").style.display = "block";
 
 
-  //captura a letra digitadau=
+  //captura a letra digitada
   document.onkeydown = (e) => {
     //coloca a letra digitada em maiscula
     let letra = e.key.toUpperCase();

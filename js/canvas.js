@@ -6,7 +6,7 @@ function desenharCanvas() {
     tabuleiro.lineJoin="round";
     tabuleiro.fillStyle ="transparent";
     tabuleiro.strokeStyle ="transparent";
-    tabuleiro.fillRect(0,0,1200,800);
+    tabuleiro.fillRect(0,0,1000,600);
     tabuleiro.beginPath();
     tabuleiro.moveTo(650,500);
     tabuleiro.lineTo(900,500);
@@ -16,7 +16,7 @@ function desenharCanvas() {
 }
 
 function desenharLinhas() {
-    tabuleiro.lineWidth= 15;
+    tabuleiro.lineWidth= 8;
     tabuleiro.lineCap="round";
     tabuleiro.lineJoin="round";
     tabuleiro.strokeStyle ="#FAFAFA";
@@ -32,7 +32,7 @@ function desenharLinhas() {
 }
 
 function escreverLetraCorreta(index) {
-    tabuleiro.font = 'bold 100px Inter';
+    tabuleiro.font = 'bold 80px Inter';
     tabuleiro.lineWidth = 6;
     tabuleiro.lineJoin = "round";
     tabuleiro.lineJoin = "round";
@@ -44,17 +44,17 @@ function escreverLetraCorreta(index) {
 }
 
 function escreverLetraIncorreta(letra, errorsLeft){
-    tabuleiro.font = 'bold 80px Inter';
+    tabuleiro.font = 'bold 40px Inter';
     tabuleiro.lineWidth = 6;
     tabuleiro.lineCap = "round";
     tabuleiro.lineJoin = "round";
-    tabuleiro.fillStyle = "#075562";
+    tabuleiro.fillStyle = "#390216";
     tabuleiro.fillText(letra, 535+(40*(10-errorsLeft)),710,40)
 
 }
 
 function desenharForca(pontos) {
-    tabuleiro.linewidth = 100;
+    tabuleiro.linewidth = 50;
     tabuleiro.lineCap ="round"
     tabuleiro.lineJoin = "round"
     tabuleiro.strokeStyle ="#FAFAFA"
@@ -114,7 +114,7 @@ function desenharForca(pontos) {
 }
 
 function exibirDerrota() {
-    tabuleiro.font = 'bold 80px Inter';
+    tabuleiro.font = 'bold 60px Inter';
     tabuleiro.lineWidth = 10;
     tabuleiro.lineCap = "round";
     tabuleiro.lineJoin="round";
@@ -123,13 +123,13 @@ function exibirDerrota() {
 }
 
 function exibirVitoria() {
-    tabuleiro.font ='bold 80px Inter';
+    tabuleiro.font ='bold 60px Inter';
     tabuleiro.lineWidth = 10;
     tabuleiro.lineCap ="round";
     tabuleiro.lineJoin ="round";
     tabuleiro.fillStyle="white";
-    tabuleiro.fillText("Você ganhou!",930,320)
-    setTimeout(recarregar, 200)
+    tabuleiro.fillText("OBA!Você ganhou!",930,320)
+    setTimeout(recarregar, 2500)
 }
 
 function recarregar() {

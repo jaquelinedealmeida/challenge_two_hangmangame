@@ -38,10 +38,7 @@
             </div>
             <section id="game">
                 <div id="div-show-hang" class="canvas">
-                    <canvas id="hangman" height="860px" width="1600"></canvas>
-                    <div>
-                        <img>
-                    </div>
+                    <canvas id="hangman" height="800px" width="1600"></canvas>
                 </div class="sublinhado">
 
             </section>
@@ -56,42 +53,41 @@
               
             </section>
 
-            <section id="write_word">
+          <section id="write_word">
 
                 <div class="keyboard_key">
-                    <button id="tecla-A" onclick="mudarTeclaClicada('A')">A</button>
-                    <button id="tecla-B" onclick="mudarTeclaClicada('B')">B</button>
-                    <button id="tecla-C" onclick="mudarTeclaClicada('C')">C</button>
-                    <button id="tecla-D" onclick="mudarTeclaClicada('D')">D</button>
-                    <button id="tecla-E" onclick="mudarTeclaClicada('E')">E</button>
-                    <button id="tecla-F" onclick="mudarTeclaClicada('F')">F</button>
-                    <button id="tecla-G" onclick="mudarTeclaClicada('G')">G</button>
-                    <button id="tecla-H" onclick="mudarTeclaClicada('H')">H</button>
-                    <button id="tecla-I" onclick="mudarTeclaClicada('I')">I</button>
+                    <button id="tecla-A" onclick="verificarLetraEscolhida('A')">A</button>
+                    <button id="tecla-B" onclick="verificarLetraEscolhida('B')">B</button>
+                    <button id="tecla-C" onclick="verificarLetraEscolhida('C')">C</button>
+                    <button id="tecla-D" onclick="verificarLetraEscolhida('D')">D</button>
+                    <button id="tecla-F" onclick="verificarLetraEscolhida('F')">F</button>
+                    <button id="tecla-G" onclick="verificarLetraEscolhida('G')">G</button>
+                    <button id="tecla-H" onclick="verificarLetraEscolhida('H')">H</button>
+                    <button id="tecla-I" onclick="verificarLetraEscolhida('I')">I</button>
                 </div>
 
 
                 <div class="keyboard_key">
-                    <button id="tecla-J" onclick="mudarTeclaClicada('J')">J</button>
-                    <button id="tecla-K" onclick="mudarTeclaClicada('K')">K</button>
-                    <button id="tecla-L" onclick="mudarTeclaClicada('L')">L</button>
-                    <button id="tecla-M" onclick="mudarTeclaClicada('M')">M</button>
-                    <button id="tecla-N" onclick="mudarTeclaClicada('N')">N</button>
-                    <button id="tecla-O" onclick="mudarTeclaClicada('O')">O</button>
-                    <button id="tecla-P" onclick="mudarTeclaClicada('P')">P</button>
-                    <button id="tecla-Q" onclick="mudarTeclaClicada('Q')">Q</button>
-                    <button id="tecla-R" onclick="mudarTeclaClicada('R')">R</button>
+                    <button id="tecla-J" onclick="verificarLetraEscolhida('J')">J</button>
+                    <button id="tecla-K" onclick="verificarLetraEscolhida('K')">K</button>
+                    <button id="tecla-L" onclick="verificarLetraEscolhida('L')">L</button>
+                    <button id="tecla-M" onclick="verificarLetraEscolhida('M')">M</button>
+                    <button id="tecla-N" onclick="verificarLetraEscolhida('N')">N</button>
+                    <button id="tecla-O" onclick="verificarLetraEscolhida('O')">O</button>
+                    <button id="tecla-P" onclick="verificarLetraEscolhida('P')">P</button>
+                    <button id="tecla-Q" onclick="verificarLetraEscolhida('Q')">Q</button>
+                    <button id="tecla-R" onclick="verificarLetraEscolhida('R')">R</button>
                 </div>
 
                 <div class="keyboard_key">
-                    <button id="tecla-S" onclick="mudarTeclaClicada('S')">S</button>
-                    <button id="tecla-T" onclick="mudarTeclaClicada('T')">T</button>
-                    <button id="tecla-U" onclick="mudarTeclaClicada('U')">U</button>
-                    <button id="tecla-V" onclick="mudarTeclaClicada('V')">V</button>
-                    <button id="tecla-W" onclick="mudarTeclaClicada('W')">W</button>
-                    <button id="tecla-Y" onclick="mudarTeclaClicada('Y')">Y</button>
-                    <button id="tecla-X" onclick="mudarTeclaClicada('X')">X</button>
-                    <button id="tecla-Z" onclick="mudarTeclaClicada('Z')">Z</button>
+                    <button id="tecla-S" onclick="verificarLetraEscolhida('S')">S</button>
+                    <button id="tecla-T" onclick="verificarLetraEscolhida('T')">T</button>
+                    <button id="tecla-U" onclick="verificarLetraEscolhida('U')">U</button>
+                    <button id="tecla-V" onclick="verificarLetraEscolhida('V')">V</button>
+                    <button id="tecla-W" onclick="verificarLetraEscolhida('W')">W</button>
+                    <button id="tecla-Y" onclick="verificarLetraEscolhida('Y')">Y</button>
+                    <button id="tecla-X" onclick="verificarLetraEscolhida('X')">X</button>
+                    <button id="tecla-Z" onclick="verificarLetraEscolhida('Z')">Z</button>
                 </div>
 
             </section>
@@ -125,8 +121,9 @@
     </main>
 
 
-    <script src="./script.js"></script>
-    <script src="./canvas.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/canvas.js"></script>
+  
 
 </body>
 
