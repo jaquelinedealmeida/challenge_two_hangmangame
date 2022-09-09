@@ -3,7 +3,6 @@ font-family: "Inter", sans-serif;
 margin: 0;
 box-sizing:border-box;
 width: 100%;
-
 }
 
 body{
@@ -15,7 +14,6 @@ background-size: cover;
 background-repeat: no-repeat;
 font-family: Inter, sans-serif;
 }
-
 
 
 header {
@@ -33,12 +31,9 @@ header {
 /*-- mobile first*/
 
 
-
 #container {
     text-align: center;
-  
 }
-
 
 #begin h1 {
     padding: 2rem  0;
@@ -50,7 +45,6 @@ header {
 
 #begin h2 {
     padding-bottom: 7rem;
- 
 }
 
 
@@ -62,23 +56,18 @@ header {
     color: #fafafa;
     font-weight: 600;
     cursor: pointer;
-    text-decoration: none;  
-        
+    text-decoration: none;        
+}
+
+#begin a:hover, #begin button:hover, #try_again button:hover, .button-word button:hover {
+    transform: scale(1.1);
+   border: rgb(248, 246, 245);     
 }
 
 #add_word {
     display: flex;
     
 }
-
-
-#begin a:hover, #begin button:hover, #try_again button:hover, .button-word button:hover {
-    transform: scale(1.1);
-   border: rgb(248, 246, 245); 
-    
-}
-
-
 
 /*kEYBOARD */
 .keyboard_key button{
@@ -97,20 +86,16 @@ header {
 
 .keyboard_key button:hover {
     transform: scale(1.3);
-    
 }
 
 /*FOOTER */
-
-
 
 #footer {
     padding-top: 2rem;
     margin-bottom:0;
     background-color: #833606;
     width: 100%;
-    margin-top: 5rem;
-      
+    margin-top: 5rem;     
 }
 
 #footer p {
@@ -232,7 +217,6 @@ header {
     .keyboard_key button {
         width: 30px;
         height: 30px;
-
     }
 
 }
@@ -252,31 +236,27 @@ header {
 @media (min-width: 768px) {
 
     #div-show-hang {
-  
-        margin-top:-5rem;  
+        margin-top:-12rem;  
         margin-bottom:-3.5rem;
         display: flex;
-      }
+    }
 
 
     
     #begin h2 {
         font-size: 2rem;
         color:rgb(240, 249, 250);
-    
     }
 
     .image-header img {
         width: 180px;
         height: 180px;
         margin-left: 80px;
-    
     } 
 
     audio {
         margin-top: 3rem;
         width: 20%;
-     
     }
 
    
@@ -285,11 +265,10 @@ header {
     }
 
     #begin a, #begin button,  #try_again button, .button-word  button{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin: 20px;
         padding: 1.3rem;
-        
-        width: 30%;
+        width: 20%;
     }
 
 
@@ -312,15 +291,14 @@ header {
       height: auto;
       top: 200px;
       font-weight: 600;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       line-height: 150%;
       justify-content: center;
       border: none;
       color: #fbfdff;
       background: transparent;
       border: none;
-    
-    text-transform:uppercase;
+      text-transform:uppercase;
     
     }
     
@@ -328,25 +306,21 @@ header {
        color: #f5f6f7; 
        text-align: center;
        text-transform:lowercase;
-    
     }
     
     .text-input:focus { 
        border: none;
        outline: none;
-    
     }
 
     .keyboard_key button {
         width: 60px;
         height: 60px;
         font-size:2.3rem;
-
     }
 
     #footer {
        padding-bottom: .5rem;
-
     }
 
     #footer p {
@@ -355,15 +329,15 @@ header {
 
     #footer img {
         width: 3%;
-     }
+    }
 
      #footer h5 {
         font-size: .6rem;
         color:rgb(246, 221, 204);
-      }
+    }
 
      #footer h6 {
        font-size: .6rem;
-     }
+    }
 
 }

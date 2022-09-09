@@ -6,7 +6,7 @@ function desenharCanvas() {
     tabuleiro.lineJoin="round";
     tabuleiro.fillStyle ="transparent";
     tabuleiro.strokeStyle ="transparent";
-    tabuleiro.fillRect(0,0,1000,600);
+    tabuleiro.fillRect(0,0,1200,800);
     tabuleiro.beginPath();
     tabuleiro.moveTo(650,500);
     tabuleiro.lineTo(900,500);
@@ -54,7 +54,7 @@ function escreverLetraIncorreta(letra, errorsLeft){
 }
 
 function desenharForca(pontos) {
-    tabuleiro.linewidth = 50;
+    tabuleiro.linewidth = 10;
     tabuleiro.lineCap ="round"
     tabuleiro.lineJoin = "round"
     tabuleiro.strokeStyle ="#FAFAFA"

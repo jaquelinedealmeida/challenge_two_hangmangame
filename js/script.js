@@ -108,28 +108,30 @@ function adcionarLetraCorreta(i) {
 function adcionarLetraIncorreta(letter) {
   if (palavraSecreta.indexOf(letter) <= 0) {
     erros -= 1;
-    //letter é o parametro da funcao
+    
   }
 }
 
 
 //acionar teclado virtual
 
-function verificarLetraEscolhida(letra){
-  document.getElementById("tecla-" + letra).disabled = true;
+function verificarLetraEscolhida(teclado){
+
+   let tecla = document.getElementById("tecla-" + teclado).disabled = true;
+   
   if(numeroTentativas > 0)
+
   {
-      mudarStyleLetra("tecla-" + letra);
-      verificarLetraClicada(letra);
-      adcionarLetraCorreta();
-      adcionarLetraIncorreta();
+    tecla.addEventListener("click", mudarStyleLetra("tecla-" + teclado),   verificarLetraClicada(teclado), adcionarLetraIncorreta(teclado)); 
     
   }    
 }
 
 
+
+
 function mudarStyleLetra(tecla) {
-  document.getElementById(tecla).style.background = "#25768f;";
+  document.getElementById(tecla).style.background = "transparent";
   document.getElementById(tecla).style.color = "#ffffff";
 }
 
